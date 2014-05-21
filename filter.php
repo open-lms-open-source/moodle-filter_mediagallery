@@ -31,7 +31,7 @@ class filter_mediagallery extends moodle_text_filter {
 
 
     public function filter($text, array $options = array()) {
-        return preg_replace_callback('#<a.*class="filter_mediagallery".*><img.*alt="(\d+)"\s*/></a>#i',
+        return preg_replace_callback('#<a.*class="filter_mediagallery".*><img.*alt="(\d+)"\s.*/></a>#i',
                                     'filter_mediagallery::replace',
                                     $text);
     }

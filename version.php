@@ -28,4 +28,6 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->version   = 2014012200;
 $plugin->requires  = 2013050100;
 $plugin->component = 'filter_mediagallery';
-$plugin->dependencies = array('mod_mediagallery' => 2014010400);
+$plugin->dependencies = array('mod_mediagallery' => 2014010400, 'tinymce_mediagallery' => 2014012100);
+$plugin->maturity = MATURITY_STABLE;
+$plugin->release = '2.5.1.0';
