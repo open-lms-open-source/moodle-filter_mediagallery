@@ -5,6 +5,8 @@ This plugin requires the Media collection activity be installed (http://github.c
 
 This plugin was written by Adam Olley \<adam.olley@netspot.com.au\> for the University of New South Wales (http://www.unsw.edu.au).
 
+Note: for the carousel to be fully functional, your theme needs to have jQuery included on the page(s) the filter displays the carousels on. If you don't have jQuery loaded, the carousel will still appear, and clicking the images will still take you to the gallery.
+
 ##Install
 ### Using Moodle
 You can install the plugin from the Moodle plugin repository from within your Moodle installation.
