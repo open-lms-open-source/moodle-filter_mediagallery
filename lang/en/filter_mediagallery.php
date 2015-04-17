@@ -24,3 +24,4 @@
  */
 
 $string['filtername'] = 'Media collection embed';
+$string['gallerymissing'] = 'The gallery embedded here has been removed.';

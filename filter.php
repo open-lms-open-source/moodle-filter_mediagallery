@@ -45,7 +45,15 @@ class filter_mediagallery extends moodle_text_filter {
             $this->renderer = $PAGE->get_renderer('mod_mediagallery');
         }
 
-        $gallery = new \mod_mediagallery\gallery($matches[1]);
+        try {
+            $gallery = new \mod_mediagallery\gallery($matches[1]);
+        } catch (dml_missing_record_exception $e) {
+            $string = '';
+            if (has_capability('moodle/course:manageactivities', $PAGE->context)) {
+                $string = get_string('gallerymissing', 'filter_mediagallery');
+            }
+            return $string;
+        }
 
         $ret = $this->renderer->view_carousel($gallery, array('filter' => true));
 
